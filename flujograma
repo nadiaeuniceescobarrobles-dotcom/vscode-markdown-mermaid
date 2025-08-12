@@ -1,0 +1,45 @@
+flowchart TD
+  A[Paciente llega a clínica de intoxicación alcohólica]
+    --> B[Triage inicial  
+        • Vía aérea, respiración, circulación  
+        • Signos vitales (PA, FC, FR, Sat)  
+        • Nivel de conciencia (RASS/Glasgow)]
+
+  B --> C{¿Compromiso vital?}
+  C -- Sí --> D[Paciente Crítico  
+        • Resucitación inmediata (A-B-C)  
+        • Intubación/ventilación  
+        • Traslado a UCI]
+
+  C -- No --> E{¿Inestabilidad hemodinámica  
+      o respiratoria?}
+  E -- Sí --> F[Paciente Agudo Inestable  
+        • Monitorización continua  
+        • Líquidos IV y oxígeno  
+        • ECG y gasometría]
+
+  E -- No --> G{¿Signos de intoxicación grave?  
+      (coma, depresión respiratoria, hipotermia)}
+  G -- Sí --> H[Paciente Agudo Estable/Grave  
+        • Observación estricta  
+        • Dosis de benzodiacepinas  
+        • Considerar referencia a hospital]
+
+  G -- No --> I{¿Intoxicación moderada o leve?}
+  I -- Moderada/Leve --> J[Paciente Agudo Estable  
+        • Observación (1 h)  
+        • Hidratación oral o IV  
+        • Seguridad (prevención de caídas)]
+
+  J --> K{¿Mejora en 4 h?}
+  K -- Sí --> L[Egreso con  
+        • Plan de seguimiento  
+        • Derivación a apoyo psicosocial]
+
+  K -- No --> M[Derivar a atención  
+        especializada (HEU u hospital)]
+
+  I -- No --> N[Paciente Crónico o Estable  
+        • Valoración psicosocial  
+        • Programa de desintoxicación ambulatoria  
+        • Seguimiento en consulta de adicciones]
